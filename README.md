@@ -14,4 +14,8 @@ By default the <b>table</b> the model is related to is the <b>class name</b> but
 add public variable <b>protected $table</b> to override the default name 
 
 The foreign key is derived from the Model Class name e.g for class Doctor that extends DBObject it becomes doctor_id
-but you can override it by declaring <code>protected $foreign_key_name = ''</code>
+but you can override it by declaring <code>protected $foreign_key_name = ''</code> in the model class
+
+example loading all doctors
+<code>$doctors = Doctors::all();</code>
+the code fetches all doctors from mysql table and converts them to the doctor model class
